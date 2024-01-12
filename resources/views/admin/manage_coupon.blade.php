@@ -5,7 +5,7 @@
 @section('container')
 <h1 class="mb-10">Manage Coupon</h1>
 
-        <a href="{{url('admin/category')}}">
+        <a href="{{url('admin/coupon')}}">
             <button type="button" class="btn btn-danger">Back</button>
         </a>
 
