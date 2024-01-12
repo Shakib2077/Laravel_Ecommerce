@@ -14653,3 +14653,15 @@ section {
 .mb-10{
     margin-bottom: 10px;
 }
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Optionally, set a specific height for vertical centering */
+}
+
+h1 {
+    text-align: center; /* Center the text within the h1 element */
+}

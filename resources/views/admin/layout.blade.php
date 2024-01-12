@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dashboard</title>
+    <title>@yield('page_title')</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('admin_assets/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -19,12 +19,13 @@
 
 <body class="animsition">
 <div class="page-wrapper">
+
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="{{url('admin/dashboard')}}">
                             <img src="{{asset('admin_assets/images/icon/logo.png')}}" alt="CoolAdmin"/>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -38,20 +39,28 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                    <li>
-                            <a href="dashboard">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                        </li>
 
-                        <li>
-                            <a href="category">
-                                <i class="fas fa-tachometer-alt"></i>Category</a>
-                        </li>
+                    <li>
+                        <a href="{{url('admin/dashboard')}}">
+                        <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('admin/category')}}">
+                        <i class="fa fa-cart-plus"></i>Category</a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('admin/coupon')}}">
+                        <i class="fa fa-cube"></i>Coupon</a>
+                    </li>
+
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- END HEADER MOBILE-->
+
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
@@ -65,13 +74,18 @@
                     <ul class="list-unstyled navbar__list">
 
                         <li>
-                            <a href="dashboard">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <a href="{{url('admin/dashboard')}}">
+                            <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
 
                         <li>
-                            <a href="category">
-                                <i class="fas fa-tachometer-alt"></i>Category</a>
+                            <a href="{{url('admin/category')}}">
+                            <i class="fa fa-cart-plus"></i>Category</a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('admin/coupon')}}">
+                             <i class="fa fa-cube"></i>Coupon</a>
                         </li>
 
                     </ul>
@@ -95,7 +109,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">Shakib</a>
+                                            <a class="js-acc-btn" href="#">Welcome Admin</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
 
@@ -106,7 +120,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="{{url('admin/logout')}}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
