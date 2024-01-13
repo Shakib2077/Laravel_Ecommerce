@@ -2,6 +2,8 @@
 
 @section('page_title', 'Manage_Coupon')
 
+@section('coupon_select','active')
+
 @section('container')
 <h1 class="mb-10">Manage Coupon</h1>
 

@@ -2,11 +2,13 @@
 
 @section('page_title', 'Manage_Category')
 
+@section('category_select','active')
+
 @section('container')
 <h1 class="mb-10">Manage Category</h1>
 
         <a href="{{url('admin/category')}}">
-            <button type="button" class="btn btn-danger">Back</button>
+            <button type="button" class="btn btn-warning">Back</button>
         </a>
 
 <div class="row m-t-20">

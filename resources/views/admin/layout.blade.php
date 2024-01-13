@@ -47,12 +47,12 @@
 
                     <li>
                         <a href="{{url('admin/category')}}">
-                        <i class="fa fa-cart-plus"></i>Category</a>
+                        <i class="fa fa-tasks"></i>Category</a>
                     </li>
 
                     <li>
                         <a href="{{url('admin/coupon')}}">
-                        <i class="fa fa-cube"></i>Coupon</a>
+                        <i class="fa fa-tag"></i>Coupon</a>
                     </li>
 
                     </ul>
@@ -73,19 +73,19 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
 
-                        <li>
+                        <li class="@yield('dashboard_select')">
                             <a href="{{url('admin/dashboard')}}">
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
 
-                        <li>
+                        <li class="@yield('category_select')">
                             <a href="{{url('admin/category')}}">
-                            <i class="fa fa-cart-plus"></i>Category</a>
+                            <i class="fa fa-tasks"></i>Category</a>
                         </li>
 
-                        <li>
-                            <a href="{{url('admin/coupon')}}">
-                             <i class="fa fa-cube"></i>Coupon</a>
+                        <li class="@yield('coupon_select')">
+                            <a href="{{('admin/coupon')}}">
+                            <i class="fa fa-tag"></i>Coupon</a>
                         </li>
 
                     </ul>
@@ -111,6 +111,7 @@
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">Welcome Admin</a>
                                         </div>
+
                                         <div class="account-dropdown js-dropdown">
 
                                             <div class="account-dropdown__body">

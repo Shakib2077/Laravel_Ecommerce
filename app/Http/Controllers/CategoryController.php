@@ -54,6 +54,7 @@ class CategoryController extends Controller
         }
         $model->category_name=$request->post('category_name');
         $model->category_slug=$request->post('category_slug');
+        $model->status=1;
         $model->save();
         $request->session()->flash('message', $message);
         return redirect('admin/category');
